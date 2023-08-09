@@ -1,6 +1,6 @@
 package org.thinkingstudio.forgeutils.impl;
 
-import net.minecraftforge.client.ConfigScreenHandler;
+import net.minecraftforge.client.ConfigGuiHandler;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModList;
 import org.thinkingstudio.forgeutils.api.Mods;
@@ -14,6 +14,6 @@ public class ModsImpl implements Mods {
 
     @Override
     public void registerModConfigScreen(ModConfigScreenProvider configScreenProvider) {
-        container.registerExtensionPoint(ConfigScreenHandler.ConfigScreenFactory.class, () -> new ConfigScreenHandler.ConfigScreenFactory((minecraft, screen) -> configScreenProvider.provide(screen)));
+        container.registerExtensionPoint(ConfigGuiHandler.ConfigGuiFactory.class, () -> new ConfigGuiHandler.ConfigGuiFactory((minecraft, screen) -> configScreenProvider.provide(screen)));
     }
 }
