@@ -1,8 +1,8 @@
 package org.thinkingstudio.forgeutils.impl;
 
-import net.minecraftforge.client.ConfigGuiHandler;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModList;
+import net.minecraftforge.fmlclient.ConfigGuiHandler;
 import org.thinkingstudio.forgeutils.api.Mods;
 
 public class ModsImpl implements Mods {
