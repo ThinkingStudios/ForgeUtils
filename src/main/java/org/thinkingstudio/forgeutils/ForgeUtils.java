@@ -1,10 +1,12 @@
 package org.thinkingstudio.forgeutils;
 
+import com.ibm.icu.impl.Pair;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
-import net.minecraftforge.fml.IExtensionPoint;
+import net.minecraftforge.fml.ExtensionPoint;
 import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fmllegacy.network.FMLNetworkConstants;
+
+import net.minecraftforge.fml.network.FMLNetworkConstants;
 import org.thinkingstudio.forgeutils.api.Mods;
 import org.thinkingstudio.forgeutils.impl.ModsImpl;
 
@@ -25,7 +27,7 @@ public class ForgeUtils {
     }
 
     public void getModExtensionPoint() {
-        ModLoadingContext.get().registerExtensionPoint(IExtensionPoint.DisplayTest.class, () -> new IExtensionPoint.DisplayTest(() -> FMLNetworkConstants.IGNORESERVERONLY, (a, b) -> true));
+        ModLoadingContext.get().registerExtensionPoint(ExtensionPoint.DISPLAYTEST, () -> Pair.of(() -> FMLNetworkConstants.IGNORESERVERONLY, (a, b) -> true));
     }
 
     public void runOnClient(Supplier<DistExecutor.SafeRunnable> clientInit) {
