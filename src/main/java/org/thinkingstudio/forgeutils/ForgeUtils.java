@@ -1,12 +1,11 @@
 package org.thinkingstudio.forgeutils;
 
-import com.ibm.icu.impl.Pair;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ExtensionPoint;
 import net.minecraftforge.fml.ModLoadingContext;
-
 import net.minecraftforge.fml.network.FMLNetworkConstants;
+import org.apache.commons.lang3.tuple.Pair;
 import org.thinkingstudio.forgeutils.api.Mods;
 import org.thinkingstudio.forgeutils.impl.ModsImpl;
 
